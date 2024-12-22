@@ -1,0 +1,331 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("Object.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+nav img {
+  margin: 50px;
+  display: flex;
+}
+
+nav ul {
+  list-style: none;
+  text-decoration: none;
+  margin: 50px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li :hover {
+  color: rgb(194, 113, 255);
+}
+
+nav ul li a {
+  text-decoration: none;
+  text-align: center;
+  color: rgb(11, 10, 10);
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+#tittle1 {
+  width: 100%;
+  font-size: 5em;
+  letter-spacing: 2px;
+  padding: 10px;
+}
+
+#tittle1 h1 {
+  color: rgb(10, 10, 10);
+  font-weight: bolder;
+  align-items: center;
+  justify-content: center;
+  margin-left: 300px;
+}
+
+#text1 {
+  color: #0a0a0a;
+  font-size: 15px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 500px;
+}
+
+#text1 span {
+  padding: 30px;
+}
+
+#tittle1 button {
+  border: 2px solid #C271FF;
+  background: #C271FF;
+  border-radius: 50px;
+  color: #100f0f;
+  padding: 15px 32px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-left: 540px;
+}
+
+#tittle2 {
+  margin: 50px;
+  padding: 50px;
+}
+
+#tittle2 h2 {
+  color: #010101;
+  text-align: center;
+  font-weight: lighter;
+  margin: 30px;
+}
+
+#text2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#text2 div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#text2 img {
+  border-radius: 50%;
+}
+
+#text2 h3,
+p {
+  color: #000000;
+  padding: 10px;
+}
+
+#quote {
+  background-color: #C271FF;
+  margin-top: -85px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+}
+
+#quote img {
+  height: 160px;
+  width: 160px;
+}
+
+#quote div {
+  color: #050505;
+  margin-left: 50px;
+}
+
+#quote div h3 {
+  margin-top: 30px;
+}
+
+
+.tutorials h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+}
+
+.tutorials2 {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 200%;
+  margin-top: 30px;
+}
+
+.tutorials3 {
+  width: 335px;
+  height: 335px;
+}
+
+.image-container {
+  position: relative;
+  width: 255px;
+  height: 154px;
+}
+
+.background-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.overlay-image {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: auto;
+
+}
+
+.tutorials3 h3 {
+  margin-top: 0;
+}
+
+.tutorials3 p {
+  color: #000000;
+}
+
+.tot {
+  height: 70px;
+}
+
+.tutorials4 {
+  display: flex;
+}
+
+.tutorials4 img {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tutorials4 h4 {
+  color: #C271FF;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+.ico {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon {
+  display: flex;
+  color: #C271FF;
+  width: 110px;
+  height: 15px;
+  margin: 15px;
+}
+
+.ico p {
+  color: #C271FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.membership {
+  background-color: #071629;
+  width: 100%;
+  position: relative;
+  height: 500px;
+}
+
+.membership h2 {
+  color: #fff;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.member {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.member div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 160px;
+  width: 260px;
+  color: #0e0e0e;
+}
+
+.member div h3,
+p {
+  padding: 10px;
+}
+
+.membership button {
+  border: 2px solid #C271FF;
+  background: #C271FF;
+  border-radius: 50px;
+  color: #0a0a0a;
+  padding: 15px 32px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-left: 630px;
+  margin-top: 80px;
+}
+
+.faq h2 {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: lighter;
+  font-size: 2.2em;
+}
+
+.faq {
+  height: 500px;
+}
+
+.faq2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.faq3 {
+  width: 40%;
+}
+
+.faq3 div h3 {
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+footer {
+  background: #071629;
+  height: 250px;
+}
+
+footer div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 200px;
+}
+
+footer p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: lighter;
+  font-size: .7em;
+  margin-top: 0;
+}
