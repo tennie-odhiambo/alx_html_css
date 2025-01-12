@@ -1,0 +1,545 @@
+/* Reset CSS */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+  --primary-color: #FF6565;
+  --text-color: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+/* HERO */
+/* Container */
+.hero-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  background-image: url('images/headphones_hero_1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo {
+  width: 161px;
+  height: 32px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  text-transform: lowercase;
+  font-size: 12px;
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary-color);
+  opacity: 0.8;
+  text-transform: uppercase;
+}
+
+/* Hide checkbox */
+.nav-check {
+  display: none;
+}
+
+/* Hide hamburger by default */
+.nav-toggle {
+  display: none;
+}
+
+/* Hero content */
+.hero-content {
+  text-align: center;
+  /* padding: 100px 0; */
+  position: relative;
+  z-index: 1;
+  margin-right: auto;
+  margin-left: auto;
+  width: 637px;
+}
+
+.hero-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 300px;
+  color: var(--text-color);
+}
+
+.hero-subtitle {
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.cta-button {
+  width: 162px;
+  height: 44px;
+  background: var(--primary-color);
+  color: var(--text-color);
+  border-radius: 25px;
+  border: 0;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  background-color: #ff5252;
+}
+
+.hero-definition {
+  color: var(--text-color);
+  font-size: 14px;
+  font-weight: 100;
+}
+
+/* Tablet Styles */
+@media screen and (max-width: 768px) and (min-width: 481px) {
+  .nav {
+    padding: 0 20px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+  }
+}
+
+/* Mobile styles */
+@media screen and (max-width: 480px) {
+  .nav-toggle {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .nav-toggle-inner,
+  .nav-toggle-inner::before,
+  .nav-toggle-inner::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--text-color);
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+
+  .nav-toggle-inner {
+    width: 18px;
+  }
+
+  .nav-toggle-inner::before {
+    top: -6px;
+    position: absolute;
+  }
+
+  .nav-toggle-inner::after {
+    bottom: -6px;
+    position: absolute;
+  }
+
+  .nav {
+    justify-content: space-between;
+    padding: 20px 15px;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    padding-top: 75px;
+    padding-left: 150px;
+  }
+
+  /* When checkbox is checked, show menu */
+  .nav-check:checked~.nav-links {
+    transform: translateX(0);
+  }
+
+  /* Animate hamburger to X */
+  .nav-check:checked~.nav-toggle .nav-toggle-inner {
+    background: transparent;
+  }
+
+  .nav-check:checked~.nav-toggle .nav-toggle-inner::before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  .nav-check:checked~.nav-toggle .nav-toggle-inner::after {
+    transform: rotate(-45deg);
+    bottom: 0;
+  }
+
+  .hero-content {
+    padding: 100px 10px 40px;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+    line-height: 1.7;
+    padding: 0;
+  }
+}
+
+/* What we do section */
+.what-we-do {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.section-title {
+  max-width: 637px;
+  font-size: 2rem;
+  margin-top: 50px;
+  margin-bottom: 1.5rem;
+  color: #333;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.section-description {
+  max-width: 637px;
+  margin: 0 auto 5rem;
+  color: #666;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.service-icon {
+  width: 75px;
+  height: 75px;
+  margin-bottom: 1rem;
+}
+
+.service-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.service-description {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Tablet Styles (768px) */
+@media screen and (max-width: 768px) and (min-width: 481px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .section-description {
+    padding: 0 1rem;
+  }
+}
+
+/* Mobile Styles (375px) */
+@media screen and (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .what-we-do {
+    padding: 2rem 1rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .service-item {
+    padding: 0.5rem;
+  }
+}
+
+/* Our results section */
+.results {
+  width: 100%;
+  padding: 64px 16px;
+  background-image: url('images/headphones_hero_2.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.results-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.results-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 24px;
+  color: var(--text-color);
+}
+
+.results-description {
+  max-width: 800px;
+  margin: 0 auto 48px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.8;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  justify-content: center;
+}
+
+.pentagon-container {
+  position: relative;
+  width: 190px;
+  height: 190px;
+  margin: 0 auto;
+  background-image: url('images/pentagone.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* .pentagon-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+} */
+
+.pentagon-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.pentagon-number {
+  font-size: 46px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: var(--text-color);
+}
+
+.pentagon-text {
+  font-size: 14px;
+  text-align: center;
+  color: var(--text-color);
+}
+
+/* Tablet styles */
+@media screen and (max-width: 768px) and (min-width: 481px) {
+  .results-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .results-description {
+    padding: 0 32px;
+  }
+
+  .pentagon-container {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+/* Mobile screen */
+@media screen and (max-width: 480px) {
+  .results-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+/* CONTACT SECTION */
+.contact-section {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.contact-section h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  font-size: 1rem;
+  background: transparent;
+  transition: border-color 0.3s ease;
+  border-radius: 0;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-bottom-color: #FF6565;
+}
+
+label {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-25%);
+  color: #666;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  font-size: 1rem;
+}
+
+textarea~label {
+  /* top: 8px; */
+  transform: translateY(50%);
+}
+
+.cta-button {
+  background-color: #FF6565;
+  color: #ffffff;
+  width: 162px;
+  height: 44px;
+  box-sizing: border-box;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  width: fit-content;
+  align-self: center;
+}
+
+.cta-button:hover {
+  background-color: indianred;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) and (min-width: 480px) {
+  .contact-section {
+    margin: 20px auto;
+  }
+
+  .contact-section h1 {
+    font-size: 20px;
+  }
+
+  input,
+  textarea,
+  .cta-button {
+    font-size: 14px;
+  }
+}
